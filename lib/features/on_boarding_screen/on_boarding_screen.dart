@@ -23,7 +23,7 @@ class OnBoardingScreen extends StatelessWidget {
             width: 331.w,
             height: 65.h,
             onPress: () {
-              GoRouter.of(context).pushNamed(AppRoutes.mainScreen);
+              GoRouter.of(context).pushNamed(AppRoutes.loginScreen);
             },
           ),
           const HeightSpace(15),
