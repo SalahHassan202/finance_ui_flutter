@@ -1,6 +1,7 @@
 import 'package:finance_ui_flutter/core/styling/app_colors.dart';
 import 'package:finance_ui_flutter/core/styling/app_fonts.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppStyles {
   static TextStyle primaryHeadLineStyle = TextStyle(
@@ -25,21 +26,21 @@ class AppStyles {
   );
 
   static TextStyle grey12MediumStyle = TextStyle(
-    fontFamily: AppFonts.mainFontName,
+    fontFamily: AppFonts.mainFont,
     fontSize: 12.sp,
     fontWeight: FontWeight.w500,
     color: AppColors.greyColor,
   );
 
   static TextStyle black15BoldStyle = TextStyle(
-    fontFamily: AppFonts.mainFontName,
+    fontFamily: AppFonts.mainFont,
     fontSize: 15.sp,
     fontWeight: FontWeight.bold,
     color: Colors.black,
   );
 
   static TextStyle black18BoldStyle = TextStyle(
-    fontFamily: AppFonts.mainFontName,
+    fontFamily: AppFonts.mainFont,
     fontSize: 18.sp,
     fontWeight: FontWeight.bold,
     color: Colors.black,
