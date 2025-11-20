@@ -1,6 +1,6 @@
 import 'package:finance_ui_flutter/core/routing/app_route.dart';
 import 'package:finance_ui_flutter/features/all_cards/all_cards.dart';
-import 'package:finance_ui_flutter/features/auth/widgets/login_screen.dart';
+import 'package:finance_ui_flutter/features/auth/login_screen.dart';
 import 'package:finance_ui_flutter/features/create_new_password.dart/create_new_password.dart';
 import 'package:finance_ui_flutter/features/forget_password/forget_password.dart';
 import 'package:finance_ui_flutter/features/my_profile/my_profile.dart';
