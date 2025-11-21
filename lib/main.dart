@@ -9,15 +9,19 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: Size(375, 812),
+      designSize: const Size(375, 812),
+      minTextAdapt: true,
+      splitScreenMode: true,
       builder: (context, child) {
         return MaterialApp.router(
-          debugShowCheckedModeBanner: false,
+          title: 'Finance UI',
           theme: AppThemes.lightTheme,
           routerConfig: RouterGenerationConfig.goRouter,
+          debugShowCheckedModeBanner: false,
         );
       },
     );
