@@ -1,35 +1,30 @@
 import 'package:finance_ui_flutter/core/routing/app_route.dart';
-import 'package:finance_ui_flutter/core/styling/app_colors.dart';
 import 'package:finance_ui_flutter/core/styling/app_styles.dart';
 import 'package:finance_ui_flutter/core/widgets/back_button_widget.dart';
-import 'package:finance_ui_flutter/core/widgets/custom_or_login_with.dart';
-import 'package:finance_ui_flutter/core/widgets/custom_social_media_icons.dart';
 import 'package:finance_ui_flutter/core/widgets/custom_text_field.dart';
 import 'package:finance_ui_flutter/core/widgets/primary_button_widget.dart';
 import 'package:finance_ui_flutter/core/widgets/spacing_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class CreateNewPassword extends StatefulWidget {
+  const CreateNewPassword({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<CreateNewPassword> createState() => _CreateNewPasswordState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _CreateNewPasswordState extends State<CreateNewPassword> {
   final formKey = GlobalKey<FormState>();
-  late TextEditingController emailController;
-  late TextEditingController password;
+  late TextEditingController newPassword;
+
   late TextEditingController confirmPassword;
-  late TextEditingController username;
 
   @override
   void initState() {
     super.initState();
-    emailController = TextEditingController();
-    password = TextEditingController();
-    username = TextEditingController();
+    newPassword = TextEditingController();
+
     confirmPassword = TextEditingController();
   }
 
@@ -41,77 +36,41 @@ class _LoginScreenState extends State<LoginScreen> {
           const HeightSpace(12),
           BackButtonWidget(),
           const HeightSpace(28),
+          Text("Create new password", style: AppStyles.primaryHeadLineStyle),
+          const HeightSpace(10),
           Text(
-            "Hello! Register to get started",
-            style: AppStyles.primaryHeadLineStyle,
+            "Your new password must be unique from those previously used.",
+            style: AppStyles.subtitlesStyles,
           ),
           const HeightSpace(32),
           CustomTextField(
-            hintText: "Username",
-            controller: username,
+            hintText: "New Password",
+            controller: newPassword,
             validator: (value) {
               if (value!.isEmpty) {
-                return "Enter Your username";
+                return "New Password";
               }
               return null;
             },
           ),
-          const HeightSpace(12),
+          const HeightSpace(15),
           CustomTextField(
-            controller: emailController,
-            hintText: "Enter Your Email",
-            validator: (value) {
-              if (value!.isEmpty) {
-                return "Enter Your Email";
-              }
-              return null;
-            },
-          ),
-          const HeightSpace(12),
-          CustomTextField(
-            hintText: "password",
-            controller: password,
-            validator: (value) {
-              if (value!.isEmpty) {
-                return "Enter Your password";
-              }
-              return null;
-            },
-          ),
-          CustomTextField(
-            hintText: "Confirm Password",
             controller: confirmPassword,
+            hintText: "Confirm Password",
             validator: (value) {
               if (value!.isEmpty) {
-                return "Enter Your Email";
+                return "Confirm Password";
               }
               return null;
             },
           ),
+          const HeightSpace(38),
 
-          const HeightSpace(30),
           PrimayButtonWidget(
-            buttonText: "Register",
+            buttonText: "Reset Password",
             onPress: () {
-              GoRouter.of(context).pushNamed(AppRoutes.verifyOtpScreen);
+              GoRouter.of(context).pushNamed(AppRoutes.passwordChanged);
             },
-          ),
-
-          const HeightSpace(35),
-          CustomOrLoginWidget(),
-          const HeightSpace(22),
-          CustomSocialLoginIcons(),
-          const HeightSpace(155),
-          RichText(
-            text: TextSpan(
-              text: "Don't have an account?",
-              style: AppStyles.black15BoldStyle.copyWith(
-                color: AppColors.primaryColor,
-              ),
-              children: [
-                TextSpan(text: "Login Now", style: AppStyles.black15BoldStyle),
-              ],
-            ),
           ),
         ],
       ),

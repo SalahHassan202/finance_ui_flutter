@@ -133,6 +133,7 @@ class _StatisticsScreenState extends State<StatisticsScreen> {
                         vertical: 8.h,
                       ),
                       decoration: BoxDecoration(
+                        // ignore: deprecated_member_use
                         color: AppColors.primaryColor.withOpacity(0.1),
                         borderRadius: BorderRadius.circular(8.r),
                       ),

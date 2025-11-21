@@ -1,4 +1,5 @@
 import 'package:finance_ui_flutter/core/routing/app_route.dart';
+import 'package:finance_ui_flutter/core/styling/app_colors.dart';
 import 'package:finance_ui_flutter/core/styling/app_styles.dart';
 import 'package:finance_ui_flutter/core/widgets/back_button_widget.dart';
 import 'package:finance_ui_flutter/core/widgets/custom_text_field.dart';
