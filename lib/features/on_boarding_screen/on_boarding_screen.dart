@@ -36,11 +36,16 @@ class OnBoardingScreen extends StatelessWidget {
             },
           ),
           const HeightSpace(46),
-          Text(
-            "Continue as a guest",
-            style: AppStyles.black15BoldStyle.copyWith(
-              color: const Color(0xff202955),
-              decoration: TextDecoration.underline,
+          InkWell(
+            onTap: () {
+              GoRouter.of(context).goNamed(AppRoutes.mainScreen);
+            },
+            child: Text(
+              "Continue as a guest",
+              style: AppStyles.black15BoldStyle.copyWith(
+                color: const Color(0xff202955),
+                decoration: TextDecoration.underline,
+              ),
             ),
           ),
         ],
