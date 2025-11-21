@@ -55,6 +55,7 @@ class MyCard extends StatelessWidget {
                 ),
               ],
             ),
+            const HeightSpace(24),
             Image.asset(AppAssets.card0, width: 327.w, height: 179.h),
             const HeightSpace(24),
             Image.asset(AppAssets.card1, width: 327.w, height: 179.h),
