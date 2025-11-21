@@ -1,4 +1,4 @@
-class AppRoutes {
+abstract class AppRoutes {
   static const String onBoardingScreen = "/onBoardingScreen";
   static const String loginScreen = '/loginScreen';
   static const String verifyOtpScreen = '/verifyOtpScreen';
@@ -9,4 +9,5 @@ class AppRoutes {
   static const String passwordChanged = '/passwordChanged';
   static const String myCard = '/myCard';
   static const String profile = '/profile';
+  static const String statistics = '/statistics';
 }
